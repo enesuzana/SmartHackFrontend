@@ -4,7 +4,7 @@
 
     /*==================================================================
     [ Focus input ]*/
-    $('.input-txt').each(function() {
+    $('.input100').each(function() {
         $(this).on('blur', function() {
             if ($(this).val().trim() != "") {
                 $(this).addClass('has-val');
@@ -17,7 +17,7 @@
 
     /*==================================================================
     [ Validate ]*/
-    var input = $('.validate-input .input-txt');
+    var input = $('.validate-input .input100');
 
     $('.validate-form').on('submit', function() {
         var check = true;
@@ -33,7 +33,7 @@
     });
 
 
-    $('.validate-form .input-txt').each(function() {
+    $('.validate-form .input100').each(function() {
         $(this).focus(function() {
             hideValidate(this);
         });
@@ -65,20 +65,19 @@
 
     /*==================================================================
     [ Show pass ]*/
-    // var showPass = 0;
-    // $('.btn-show-pass').on('click', function(){
-    //     if(showPass == 0) {
-    //         $(this).next('input').attr('type','text');
-    //         $(this).addClass('active');
-    //         showPass = 1;
-    //     }
-    //     else {
-    //         $(this).next('input').attr('type','password');
-    //         $(this).removeClass('active');
-    //         showPass = 0;
-    //     }
+    var showPass = 0;
+    $('.btn-show-pass').on('click', function() {
+        if (showPass == 0) {
+            $(this).next('input').attr('type', 'text');
+            $(this).addClass('active');
+            showPass = 1;
+        } else {
+            $(this).next('input').attr('type', 'password');
+            $(this).removeClass('active');
+            showPass = 0;
+        }
 
-    // });
+    });
 
 
 })(jQuery);

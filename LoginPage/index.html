@@ -6,31 +6,47 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <header>
-        <nav>
-                <div class="navigation-bar">
-                    <ul>
-                       <li> <a href="/EvenimentePage/evenimente.html">Evenimente</a></li>
-                       <li> <a href="">Donatii</a></li>
-                        <li><a href="">Ajutor Live</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="/LoginPage/index.html">Log In</a></li>
-                    </ul>
-                </div>
-        </nav>
+    <nav>
+        <div class="navigation-bar">
+            <ul>
+                <li> <a href="/EvenimentePage/evenimente.html">Evenimente</a></li>
+                <li> <a href="">Donatii</a></li>
+                <li><a href="">Ajutor Live</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="/LoginPage/index.html">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
+
 <body>
     <div class="wrap-login">
         <form action="form" class="login-form" method="post">
             <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required autocomplete="off">
+            <div class="wrap-input100 validate-input" data-validate="Enter username">
+                <input type="text" class="input-txt" placeholder="Enter Username" name="username" required autocomplete="off">
+                <span class="focus-input-txt" data-placeholder="">
+                        </span>
+            </div>
+
+            <!-- <br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <br>
+                <button type="submit" class="login100-form-btn">Login</button> -->
+
             <br>
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <div class="wrap-input100 validate-input" data-validate="Enter password">
+                <input type="password" class="input-txt" placeholder="Enter Password" name="password" required>
+                <span class="focus-input-txt" data-placeholder="">
+                    </span>
+            </div>
             <br>
-            <button type="submit">Login</button>
+            <button type="submit" class="login100-form-btn">Login</button>
             <!-- <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label> -->
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label> -->
 
     </div>
     <script src="script.js"></script>
